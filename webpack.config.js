@@ -19,8 +19,7 @@ module.exports = {
   entry: { shell: path.join(src, 'index.js'), ...entryPoints },
   output: {
     path: path.join(__dirname, 'dist', '_bundles'),
-    chunkFilename: '[name].[hash].bundle.js',
-    filename: '[name].[hash].bundle.js',
+    filename: '[name].js',
     publicPath: process.env.BASE_PATH ? `/${process.env.BASE_PATH}/` : '/',
     pathinfo: false,
   },
@@ -58,9 +57,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    disableHostCheck: true,
     contentBase: path.join(__dirname, 'dist'),
-    host: '0.0.0.0',
     historyApiFallback: {
       index: '/index.html',
       disableDotRule: true,
@@ -79,14 +76,7 @@ module.exports = {
       version: false,
       warnings: true,
     },
-    publicPath: process.env.BASE_PATH ? `/${process.env.BASE_PATH}/` : '/',
     hot: true,
     compress: true,
-    watchOptions: {
-      ignored: [
-        /node_modules([\\]+|\/)+(?!@sendgrid)/,
-        /\@sendgrid([\\]+|\/)node_modules/,
-      ],
-    },
   },
 };
