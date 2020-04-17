@@ -16,6 +16,7 @@ const entryPoints = applications.reduce((entries, application) => {
 }, {});
 
 module.exports = {
+  mode: 'development',
   entry: { shell: path.join(src, 'index.js'), ...entryPoints },
   output: {
     path: path.join(__dirname, 'dist', '_bundles'),
