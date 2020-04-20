@@ -53,10 +53,21 @@ module.exports = {
         title: capitalize(file),
         inject: true,
         template: path.join(__dirname, 'public', 'application.html'),
-        filename: path.join(__dirname, 'dist', file, 'index.html'),
+        filename: path.join(
+          __dirname,
+          'dist',
+          'applications',
+          file,
+          'index.html',
+        ),
       });
     }),
   ],
+  resolve: {
+    alias: {
+      bifrost: path.resolve(__dirname, 'lib/'),
+    },
+  },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     historyApiFallback: {
