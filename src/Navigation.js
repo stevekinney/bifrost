@@ -16,6 +16,12 @@ export const Navigation = () => (
       <li>
         <NavLink to="/messaging">Messaging</NavLink>
       </li>
+      <li>
+        <NavLink to="/console/phone-numbers/incoming?iframe=true">Numbers</NavLink>
+      </li>
+      <li>
+        <NavLink to="/console/chat/dashboard?iframe=true">Chat</NavLink>
+      </li>
     </ul>
   </section>
 );
