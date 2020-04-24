@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const capitalize = (string) => string[0].toUpperCase() + string.slice(1);
@@ -40,6 +41,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.DefinePlugin({
+      __IFRAME_HOST__: JSON.stringify(process.env.IFRAME_HOST || 'http://www.local.twilio.com'),
+    }),
     new HtmlWebpackPlugin({
       chunks: ['shell'],
       title: 'Bifrost',
