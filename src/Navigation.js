@@ -20,6 +20,12 @@ export const Navigation = () => (
         <NavLink to="/console/phone-numbers/incoming?iframe=true">Numbers</NavLink>
       </li>
       <li>
+        <NavLink to="/console/phone-numbers/getting-started?iframe=true">Numbers - Getting Started</NavLink>
+      </li>
+      <li>
+        <NavLink to="/console/phone-numbers/overview?iframe=true">Numbers - Overview</NavLink>
+      </li>
+      <li>
         <NavLink to="/console/chat/dashboard?iframe=true">Chat</NavLink>
       </li>
     </ul>
