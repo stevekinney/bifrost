@@ -17,6 +17,9 @@ export const Navigation = () => (
         <NavLink to="/messaging">Messaging</NavLink>
       </li>
       <li>
+        <NavLink to="/console?disable_navigation=true">Console Dashboard</NavLink>
+      </li>
+      <li>
         <NavLink to="/console/phone-numbers/incoming?disable_navigation=true">Numbers</NavLink>
       </li>
       <li>
