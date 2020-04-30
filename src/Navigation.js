@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { NavUrl } from 'bifrost';
 
 export const Navigation = () => (
   <section className="navigation">
@@ -35,13 +36,13 @@ export const Navigation = () => (
         <NavLink to="/console/functions/manage?disable_navigation=true">Functions</NavLink>
       </li>
       <li>
-        <NavLink to="/console/functions/api?disable_navigation=true">Functions - API</NavLink>
+        <NavLink to={NavUrl({ url: "/console/functions/api", consoleApp: true })}>Functions - API</NavLink>
       </li>
       <li>
-        <NavLink to="/console/debugger?disable_navigation=true">Debugger</NavLink>
+        <NavLink to={NavUrl({ url: "/console/debugger", consoleApp: true })}>Debugger</NavLink>
       </li>
       <li>
-        <NavLink to="/console/debugger/alert-triggers?disable_navigation=true">Debugger - Alert Triggers</NavLink>
+        <NavLink to={NavUrl({ url: "/console/debugger/alert-triggers", consoleApp: true })}>Debugger - Alert Triggers</NavLink>
       </li>
     </ul>
   </section>
