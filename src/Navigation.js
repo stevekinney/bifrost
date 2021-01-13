@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { NavUrl } from 'bifrost';
 
 export const Navigation = () => (
   <section className="navigation">
@@ -17,31 +18,31 @@ export const Navigation = () => (
         <NavLink to="/messaging">Messaging</NavLink>
       </li>
       <li>
-        <NavLink to="/console?disable_navigation=true">Console Dashboard</NavLink>
+        <NavLink to={NavUrl({ url: "/console", consoleApp: true })}>Console Dashboard</NavLink>
       </li>
       <li>
-        <NavLink to="/console/phone-numbers/incoming?disable_navigation=true">Numbers</NavLink>
+        <NavLink to={NavUrl({ url: "/console/phone-numbers/incoming", consoleApp: true })}>Numbers</NavLink>
       </li>
       <li>
-        <NavLink to="/console/phone-numbers/getting-started?disable_navigation=true">Numbers - Getting Started</NavLink>
+        <NavLink to={NavUrl({ url: "/console/phone-numbers/getting-started", consoleApp: true })}>Numbers - Getting Started</NavLink>
       </li>
       <li>
-        <NavLink to="/console/phone-numbers/overview?disable_navigation=true">Numbers - Overview</NavLink>
+        <NavLink to={NavUrl({ url: "/console/phone-numbers/overview", consoleApp: true })}>Numbers - Overview</NavLink>
       </li>
       <li>
-        <NavLink to="/console/chat/dashboard?disable_navigation=true">Chat</NavLink>
+        <NavLink to={NavUrl({ url: "/console/chat/dashboard", consoleApp: true })}>Chat</NavLink>
       </li>
       <li>
-        <NavLink to="/console/functions/manage?disable_navigation=true">Functions</NavLink>
+        <NavLink to={NavUrl({ url: "/console/functions/manage", consoleApp: true })}>Functions</NavLink>
       </li>
       <li>
-        <NavLink to="/console/functions/api?disable_navigation=true">Functions - API</NavLink>
+        <NavLink to={NavUrl({ url: "/console/functions/api", consoleApp: true })}>Functions - API</NavLink>
       </li>
       <li>
-        <NavLink to="/console/debugger?disable_navigation=true">Debugger</NavLink>
+        <NavLink to={NavUrl({ url: "/console/debugger", consoleApp: true })}>Debugger</NavLink>
       </li>
       <li>
-        <NavLink to="/console/debugger/alert-triggers?disable_navigation=true">Debugger - Alert Triggers</NavLink>
+        <NavLink to={NavUrl({ url: "/console/debugger/alert-triggers", consoleApp: true })}>Debugger - Alert Triggers</NavLink>
       </li>
     </ul>
   </section>
